@@ -2,12 +2,11 @@
 
 const name = 'Mario';
 
-
 // Dichiara la funzione qui.
 
-
-// Invoca la funzione qui e stampa il risultato in console
-
-
-
+function Greatingname(name){
+    // Invoca la funzione qui e stampa il risultato in console
+return name = 'Mario';
+}
 //Risultato atteso se si passa 'Mario': // ciao Mario
+console. log(`ciao`,Greatingname(name));

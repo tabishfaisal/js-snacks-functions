@@ -1,13 +1,26 @@
 /* Scrivi una funzione che accetti una stringa e restituisca il numero di vocali contenute al suo interno */
 
-const word = 'javascript';
-
-
 // Dichiara la funzione qui.
 
+function haVocali (str){
+    const vowel = str.match(/[aeiou]/gi);
+    return vowel ? vowel.length : 0;
+}
+const word = "javascript";
+const numerodiVocali = haVocali(word);
+console. log(numerodiVocali);
 
-// Invoca la funzione qui e stampa il risultato in console
+// altrimenti possiamo usare il metodo filter
+// ovviamente prima converto la string a Array poi faccio uscire un output di vocali
 
+function haVocali(str){
+    const vowels = 'aeiouAEIOU';
 
+    const vowelArray = [...str].filter(char => vowels.includes(char));
 
-//Risultato atteso se si passa 'javascript': 3 (a, a, i)
+    return vowelArray.length;
+}
+
+const parola = "javascript";
+const vocali = haVocali(parola);
+console. log(vocali);
